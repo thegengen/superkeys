@@ -1,0 +1,26 @@
+'use strict';
+// The module 'vscode' contains the VS Code extensibility API
+// Import the module and reference it with the alias vscode in your code below
+import * as vscode from 'vscode';
+import URI from 'vscode-uri';
+
+async function previewHelp(name) {
+        let uri = URI.parse(`file://${__dirname}/help/${name}.html`);
+        let success = await vscode.commands.executeCommand('vscode.previewHtml', uri);
+}
+
+// this method is called when your extension is activated
+// your extension is activated the very first time the command is executed
+export function activate(context: vscode.ExtensionContext) {
+
+    let disposable = vscode.commands.registerCommand('extension.fileHelp', () => {
+        // The code you place here will be executed every time your command is executed
+        previewHelp('file');
+    });
+
+    context.subscriptions.push(disposable);
+}
+
+// this method is called when your extension is deactivated
+export function deactivate() {
+}
