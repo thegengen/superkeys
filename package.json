@@ -217,6 +217,30 @@
       {
         "command": "workbench.action.toggleActivityBar",
         "key": "alt-u a"
+      },
+      {
+        "command": "actions.find",
+        "key": "alt-/ f"
+      },
+      {
+        "command": "workbench.view.search",
+        "key": "alt-/ p"
+      },
+      {
+        "command": "editor.action.startFindReplaceAction",
+        "key": "alt-/ r"
+      },
+      {
+        "command": "workbench.action.replaceInFiles",
+        "key": "alt-/ shift-r"
+      },
+      {
+        "command": "editor.action.nextMatchFindAction",
+        "key": "alt-/ n"
+      },
+      {
+        "command": "editor.action.previousMatchFindAction",
+        "key": "alt-/ p"
       }
     ]
   },
