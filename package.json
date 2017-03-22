@@ -11,236 +11,30 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.fileHelp"
+    "onCommand:superKeys.activate"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.fileHelp",
-        "title": "SuperKeys: Help (File)"
+        "command": "superKeys.activate",
+        "title": "SuperKeys: Activate"
       }
     ],
     "keybindings": [
       {
-        "command": "workbench.action.quickOpen",
+        "command": "superKeys.activate",
         "key": "alt-space"
       },
       {
-        "command": "workbench.action.files.newUntitledFile",
-        "key": "alt-f n"
+        "command": "superKeys.quickOpen",
+        "key": "space",
+        "when": "superKeys.active"
       },
       {
-        "command": "workbench.action.files.save",
-        "key": "alt-f s"
-      },
-      {
-        "command": "workbench.action.files.saveAs",
-        "key": "alt-f shift-s"
-      },
-      {
-        "command": "workbench.action.files.saveAll",
-        "key": "alt-f a"
-      },
-      {
-        "command": "workbench.action.files.revert",
-        "key": "alt-f u"
-      },
-      {
-        "command": "workbench.files.action.compareFileWith",
-        "key": "alt-f d"
-      },
-      {
-        "command": "workbench.action.files.copyPathOfActiveFile",
-        "key": "alt-f p"
-      },
-      {
-        "command": "workbench.action.files.revealActiveFileInWindows",
-        "key": "alt-f r"
-      },
-      {
-        "command": "workbench.action.editor.changeLanguageMode",
-        "key": "alt-f l"
-      },
-      {
-        "command": "editor.action.indentationToSpaces",
-        "key": "alt-f i"
-      },
-      {
-        "command": "editor.action.indentationToTabs",
-        "key": "alt-f shift-i"
-      },
-      {
-        "command": "editor.action.moveLinesDownAction",
-        "key": "alt-l alt-m"
-      },
-      {
-        "command": "editor.action.copyLinesDownAction",
-        "key": "alt-l alt-c"
-      },
-      {
-        "command": "editor.action.deleteLines",
-        "key": "alt-l alt-x"
-      },
-      {
-        "command": "editor.action.joinLines",
-        "key": "alt-l alt-j"
-      },
-      {
-        "command": "editor.action.insertLineBefore",
-        "key": "alt-l a"
-      },
-      {
-        "command": "editor.action.insertLineAfter",
-        "key": "alt-l b"
-      },
-      {
-        "command": "editor.action.smartSelect.grow",
-        "key": "alt-s alt-g"
-      },
-      {
-        "command": "editor.action.smartSelect.shrink",
-        "key": "alt-s alt-s"
-      },
-      {
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "key": "alt-s alt-n"
-      },
-      {
-        "command": "editor.action.selectHighlights",
-        "key": "alt-s a"
-      },
-      {
-        "command": "editor.action.selectAllMatches",
-        "key": "alt-s /"
-      },
-      {
-        "command": "editor.action.goToDeclaration",
-        "key": "alt-n d"
-      },
-      {
-        "command": "editor.action.openDeclarationToTheSide",
-        "key": "alt-n s"
-      },
-      {
-        "command": "editor.action.previewDeclaration",
-        "key": "alt-n p"
-      },
-      {
-        "command": "workbench.action.navigateBack",
-        "key": "alt-n alt-b"
-      },
-      {
-        "command": "workbench.action.navigateForward",
-        "key": "alt-n alt-f"
-      },
-      {
-        "command": "workbench.action.splitEditor",
-        "key": "alt-e s"
-      },
-      {
-        "command": "workbench.action.showAllEditors",
-        "key": "alt-e space"
-      },
-      {
-        "command": "workbench.action.nextEditorInGroup",
-        "key": "alt-e alt-n"
-      },
-      {
-        "command": "workbench.action.previousEditorInGroup",
-        "key": "alt-e alt-p"
-      },
-      {
-        "command": "workbench.action.closeActiveEditor",
-        "key": "alt-e w"
-      },
-      {
-        "command": "workbench.action.closeEditorsInGroup",
-        "key": "alt-e g"
-      },
-      {
-        "command": "workbench.action.closeOtherEditors",
-        "key": "alt-e o"
-      },
-      {
-        "command": "workbench.action.evenEditorWidths",
-        "key": "alt-e ="
-      },
-      {
-        "command": "workbench.view.explorer",
-        "key": "alt-u e"
-      },
-      {
-        "command": "workbench.view.search",
-        "key": "alt-u /"
-      },
-      {
-        "command": "workbench.view.git",
-        "key": "alt-u g"
-      },
-      {
-        "command": "workbench.view.debug",
-        "key": "alt-u d"
-      },
-      {
-        "command": "workbench.view.extensions",
-        "key": "alt-u x"
-      },
-      {
-        "command": "workbench.action.output.toggleOutput",
-        "key": "alt-u o"
-      },
-      {
-        "command": "workbench.actions.view.problems",
-        "key": "alt-u p"
-      },
-      {
-        "command": "workbench.action.terminal.toggleTerminal",
-        "key": "alt-u t"
-      },
-      {
-        "command": "workbench.action.toggleFullScreen",
-        "key": "alt-u f"
-      },
-      {
-        "command": "workbench.action.toggleZenMode",
-        "key": "alt-u z"
-      },
-      {
-        "command": "workbench.action.toggleEditorGroupLayout",
-        "key": "alt-u l"
-      },
-      {
-        "command": "workbench.action.toggleSidebarVisibility",
-        "key": "alt-u s"
-      },
-      {
-        "command": "workbench.action.toggleActivityBar",
-        "key": "alt-u a"
-      },
-      {
-        "command": "actions.find",
-        "key": "alt-/ f"
-      },
-      {
-        "command": "workbench.view.search",
-        "key": "alt-/ p"
-      },
-      {
-        "command": "editor.action.startFindReplaceAction",
-        "key": "alt-/ r"
-      },
-      {
-        "command": "workbench.action.replaceInFiles",
-        "key": "alt-/ shift-r"
-      },
-      {
-        "command": "editor.action.nextMatchFindAction",
-        "key": "alt-/ n"
-      },
-      {
-        "command": "editor.action.previousMatchFindAction",
-        "key": "alt-/ p"
+        "command": "superKeys.file.new",
+        "key": "f n",
+        "when": "superKeys.active"
       }
     ]
   },
