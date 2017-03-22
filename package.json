@@ -22,20 +22,40 @@
       }
     ],
     "keybindings": [
-      {
-        "command": "superKeys.activate",
-        "key": "alt-space"
-      },
-      {
-        "command": "superKeys.quickOpen",
-        "key": "space",
-        "when": "superKeys.active"
-      },
-      {
-        "command": "superKeys.file.new",
-        "key": "f n",
-        "when": "superKeys.active"
-      }
+      { "command": "superKeys.activate", "key": "alt-space" },
+      { "command": "superKeys.deactivate", "key": "escape", "when": "superKeys.mode != null" },
+      { "command": "superKeys.toplevel.quickOpen", "key": "space", "when": "superKeys.mode == 'toplevel'"},
+      { "command": "superKeys.toplevel.file", "key": "f", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.toplevel.line", "key": "l", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.toplevel.select", "key": "s", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.toplevel.navigate", "key": "n", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.file.new", "key": "n", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.save", "key": "s", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.saveAll", "key": "a", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.undo", "key": "u", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.diff", "key": "d", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.path", "key": "p", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.reveal", "key": "r", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.file.language", "key": "l", "when": "superKeys.mode == 'file'" },
+      { "command": "superKeys.line.moveUp", "key": "u", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.moveDown", "key": "d", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.copy", "key": "c", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.delete", "key": "x", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.above", "key": "a", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.below", "key": "b", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.select.grow", "key": "g", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.shrink", "key": "s", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.next", "key": "n", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.previous", "key": "p", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.above", "key": "a", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.below", "key": "b", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.highlights", "key": "h", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.select.searchMatches", "key": "/", "when": "superKeys.mode == 'select'" },
+      { "command": "superKeys.navigate.definition", "key": "d", "when": "superKeys.mode == 'navigate'" },
+      { "command": "superKeys.navigate.splitDefinition", "key": "s", "when": "superKeys.mode == 'navigate'" },
+      { "command": "superKeys.navigate.previewDefinition", "key": "p", "when": "superKeys.mode == 'navigate'" },
+      { "command": "superKeys.navigate.back", "key": "b", "when": "superKeys.mode == 'navigate'" },
+      { "command": "superKeys.navigate.forward", "key": "f", "when": "superKeys.mode == 'navigate'" }
     ]
   },
   "scripts": {
