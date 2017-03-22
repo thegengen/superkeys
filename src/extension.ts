@@ -43,12 +43,30 @@ export function activate(context: vscode.ExtensionContext) {
     navigate.register('back', 'workbench.action.navigateBack');
     navigate.register('forward', 'workbench.action.navigateForward');
 
-    let toplevel = new Mode('toplevel', 'SK▸ [ FLSN]');
+    let editor = new Mode('editor', 'SK (Editor)▸ [SNPWGO=]');
+    editor.register('split', 'workbench.action.splitEditor');
+    editor.register('next', 'workbench.action.nextEditorInGroup');
+    editor.register('previous', 'workbench.action.previousEditorInGroup');
+    editor.register('close', 'workbench.action.closeActiveEditor');
+    editor.register('closeAllInGroup', 'workbench.action.closeEditorsInGroup');
+    editor.register('closeOthers', 'workbench.action.closeOtherEditors');
+    editor.register('equalWidths', 'workbench.action.evenEditorWidths');
+
+    let ui = new Mode('ui', 'SK (UI - WIP)▸ [FZLSA]');
+    ui.register('fullScreen', 'workbench.action.toggleFullScreen');
+    ui.register('zen', 'workbench.action.toggleZenMode');
+    ui.register('toggleLayout', 'workbench.action.toggleEditorGroupLayout');
+    ui.register('toggleSidebar', 'workbench.action.toggleSidebarVisibility');
+    ui.register('toggleActivityBar', 'workbench.action.toggleActivityBar');
+
+    let toplevel = new Mode('toplevel', 'SK▸ [ FLSNEU]');
     toplevel.register('quickOpen', 'workbench.action.quickOpen');
     toplevel.registerMode(file);
     toplevel.registerMode(line);
     toplevel.registerMode(select);
     toplevel.registerMode(navigate);
+    toplevel.registerMode(editor);
+    toplevel.registerMode(ui);
 
     var activate = vscode.commands.registerCommand('superKeys.activate', () => {
         toplevel.activate();
@@ -64,6 +82,8 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(line);
     context.subscriptions.push(select);
     context.subscriptions.push(navigate);
+    context.subscriptions.push(editor);
+    context.subscriptions.push(ui);
     context.subscriptions.push(toplevel);
 }
 

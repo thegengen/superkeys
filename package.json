@@ -29,6 +29,8 @@
       { "command": "superKeys.toplevel.line", "key": "l", "when": "superKeys.mode == 'toplevel'" },
       { "command": "superKeys.toplevel.select", "key": "s", "when": "superKeys.mode == 'toplevel'" },
       { "command": "superKeys.toplevel.navigate", "key": "n", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.toplevel.editor", "key": "e", "when": "superKeys.mode == 'toplevel'" },
+      { "command": "superKeys.toplevel.ui", "key": "u", "when": "superKeys.mode == 'toplevel'" },
       { "command": "superKeys.file.new", "key": "n", "when": "superKeys.mode == 'file'" },
       { "command": "superKeys.file.save", "key": "s", "when": "superKeys.mode == 'file'" },
       { "command": "superKeys.file.saveAll", "key": "a", "when": "superKeys.mode == 'file'" },
@@ -55,7 +57,19 @@
       { "command": "superKeys.navigate.splitDefinition", "key": "s", "when": "superKeys.mode == 'navigate'" },
       { "command": "superKeys.navigate.previewDefinition", "key": "p", "when": "superKeys.mode == 'navigate'" },
       { "command": "superKeys.navigate.back", "key": "b", "when": "superKeys.mode == 'navigate'" },
-      { "command": "superKeys.navigate.forward", "key": "f", "when": "superKeys.mode == 'navigate'" }
+      { "command": "superKeys.navigate.forward", "key": "f", "when": "superKeys.mode == 'navigate'" },
+      { "command": "superKeys.editor.split", "key": "s", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.next", "key": "n", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.previous", "key": "p", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.close", "key": "c", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.closeAllInGroup", "key": "g", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.closeOthers", "key": "o", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.editor.equalWidths", "key": "=", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.ui.fullScreen", "key": "f", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.zen", "key": "z", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.toggleLayout", "key": "l", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.toggleSidebar", "key": "s", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.toggleActivityBar", "key": "a", "when": "superKeys.mode == 'ui'" }
     ]
   },
   "scripts": {
