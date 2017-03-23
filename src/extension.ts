@@ -52,15 +52,23 @@ export function activate(context: vscode.ExtensionContext) {
     editor.register('closeOthers', 'workbench.action.closeOtherEditors');
     editor.register('equalWidths', 'workbench.action.evenEditorWidths');
 
-    let ui = new Mode('ui', 'SK (UI - WIP)▸ [FZLSA]');
+    let ui = new Mode('ui', 'SK (UI)▸ [E/GDOPTFZLSA]');
+    ui.register('explorer', 'workbench.view.explorer');
+    ui.register('search', 'workbench.view.search');
+    ui.register('git', 'workbench.view.git');
+    ui.register('debug', 'workbench.view.debug');
+    ui.register('output', 'workbench.action.output.toggleOutput');
+    ui.register('problems', 'workbench.actions.view.problems');
+    ui.register('terminal', 'workbench.action.terminal.toggleTerminal');
     ui.register('fullScreen', 'workbench.action.toggleFullScreen');
     ui.register('zen', 'workbench.action.toggleZenMode');
     ui.register('toggleLayout', 'workbench.action.toggleEditorGroupLayout');
     ui.register('toggleSidebar', 'workbench.action.toggleSidebarVisibility');
     ui.register('toggleActivityBar', 'workbench.action.toggleActivityBar');
 
-    let toplevel = new Mode('toplevel', 'SK▸ [ FLSNEU]');
+    let toplevel = new Mode('toplevel', 'SK▸ [ CFLSNEU]');
     toplevel.register('quickOpen', 'workbench.action.quickOpen');
+    toplevel.register('showCommands', 'workbench.action.showCommands');
     toplevel.registerMode(file);
     toplevel.registerMode(line);
     toplevel.registerMode(select);

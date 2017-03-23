@@ -11,7 +11,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:superKeys.activate"
+    "onCommand:superKeys.activate",
+    "onCommand:superKeys.deactivate"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -19,12 +20,17 @@
       {
         "command": "superKeys.activate",
         "title": "SuperKeys: Activate"
+      },
+      {
+        "command": "superKeys.deactivate",
+        "title": "SuperKeys: Deactivate"
       }
     ],
     "keybindings": [
       { "command": "superKeys.activate", "key": "alt-space" },
       { "command": "superKeys.deactivate", "key": "escape", "when": "superKeys.mode != null" },
       { "command": "superKeys.toplevel.quickOpen", "key": "space", "when": "superKeys.mode == 'toplevel'"},
+      { "command": "superKeys.toplevel.showCommands", "key": "c", "when": "superKeys.mode == 'toplevel'"},
       { "command": "superKeys.toplevel.file", "key": "f", "when": "superKeys.mode == 'toplevel'" },
       { "command": "superKeys.toplevel.line", "key": "l", "when": "superKeys.mode == 'toplevel'" },
       { "command": "superKeys.toplevel.select", "key": "s", "when": "superKeys.mode == 'toplevel'" },
@@ -65,11 +71,17 @@
       { "command": "superKeys.editor.closeAllInGroup", "key": "g", "when": "superKeys.mode == 'editor'" },
       { "command": "superKeys.editor.closeOthers", "key": "o", "when": "superKeys.mode == 'editor'" },
       { "command": "superKeys.editor.equalWidths", "key": "=", "when": "superKeys.mode == 'editor'" },
+      { "command": "superKeys.ui.explorer", "key": "e", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.search", "key": "/", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.git", "key": "g", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.debug", "key": "d", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.output", "key": "o", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.problems", "key": "p", "when": "superKeys.mode == 'ui'" },
+      { "command": "superKeys.ui.terminal", "key": "t", "when": "superKeys.mode == 'ui'" },
       { "command": "superKeys.ui.fullScreen", "key": "f", "when": "superKeys.mode == 'ui'" },
       { "command": "superKeys.ui.zen", "key": "z", "when": "superKeys.mode == 'ui'" },
       { "command": "superKeys.ui.toggleLayout", "key": "l", "when": "superKeys.mode == 'ui'" },
-      { "command": "superKeys.ui.toggleSidebar", "key": "s", "when": "superKeys.mode == 'ui'" },
-      { "command": "superKeys.ui.toggleActivityBar", "key": "a", "when": "superKeys.mode == 'ui'" }
+      { "command": "superKeys.ui.toggleSidebar", "key": "s", "when": "superKeys.mode == 'ui'" }
     ]
   },
   "scripts": {
