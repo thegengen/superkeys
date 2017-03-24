@@ -48,6 +48,7 @@
       { "command": "superKeys.line.moveUp", "key": "u", "when": "superKeys.mode == 'line'" },
       { "command": "superKeys.line.moveDown", "key": "d", "when": "superKeys.mode == 'line'" },
       { "command": "superKeys.line.copy", "key": "c", "when": "superKeys.mode == 'line'" },
+      { "command": "superKeys.line.join", "key": "j", "when": "superKeys.mode == 'line'" },
       { "command": "superKeys.line.delete", "key": "x", "when": "superKeys.mode == 'line'" },
       { "command": "superKeys.line.above", "key": "a", "when": "superKeys.mode == 'line'" },
       { "command": "superKeys.line.below", "key": "b", "when": "superKeys.mode == 'line'" },

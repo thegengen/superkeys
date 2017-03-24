@@ -19,6 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
     file.register('language', 'workbench.action.editor.changeLanguageMode');
 
     let line = new Mode('line', 'SK (Line) [UDCXJAB]');
+    line.registerRepeating('join', 'editor.action.joinLines');
     line.registerRepeating('moveUp', 'editor.action.moveLinesUpAction');
     line.registerRepeating('moveDown', 'editor.action.moveLinesDownAction');
     line.registerRepeating('copy', 'editor.action.copyLinesDownAction');
